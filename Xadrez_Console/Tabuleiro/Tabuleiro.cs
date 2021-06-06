@@ -12,5 +12,10 @@
             this.colunas = _colunas;
             pecas = new Peca[this.linhas, this.colunas];
         }
+
+        public Peca peca(int linnha, int coluna)
+        {
+          return peca[linha,coluna];
+        }
     }
 }
