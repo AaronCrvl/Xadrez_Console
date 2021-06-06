@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using xadre;
+using tabuleiro;
+using xadrez;
 
 namespace xadrez_console
 {
@@ -11,13 +12,20 @@ namespace xadrez_console
   {
     static void Main(string[] args)
     {
-      Tabuleiro tab = new Tabuleiro(8,8);  
+      try
+      {
+        Tabuleiro tab = new Tabuleiro(8,8);  
 
-      tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1,3));
+        tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1,3));
 
-      Tela.imprimirTabuleiro(tab);
+        Tela.imprimirTabuleiro(tab);
 
-      Console.ReadLine();
+        Console.ReadLine();
+      }
+      catch(TabuleiroException e)
+      {
+        throw new TabuleiroException(e.Message);
+      }
     }
   }
 }
