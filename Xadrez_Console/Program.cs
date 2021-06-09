@@ -12,7 +12,7 @@ namespace xadrez_console
   {
     static void Main(string[] args)
     {
-      try
+      /*try
       {
         Tabuleiro tab = new Tabuleiro(8,8);  
 
@@ -25,7 +25,26 @@ namespace xadrez_console
       catch(TabuleiroException e)
       {
         throw new TabuleiroException(e.Message);
+      }*/
+
+      try
+      {
+        PosicaoXadrez pos = new PosicaoXadrez('a',1);
+        PosicaoXadrez pos2 = new PosicaoXadrez('c',7);
+
+        Console.WriteLine(pos);
+        Console.WriteLine(pos.toPosicao());
+
+        Console.WriteLine(pos2);
+        Console.WriteLine(pos2.toPosicao());
+
+        Console.ReadLine();
       }
+      catch(Exception e)
+      {
+        return "Falha em caso teste" + e.Message;
+      }
+      
     }
   }
 }
