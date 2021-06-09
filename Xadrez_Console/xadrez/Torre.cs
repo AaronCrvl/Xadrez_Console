@@ -12,5 +12,4 @@ namespace xadrez
       return "T";
     }
   }
-
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,6 +17,11 @@ namespace tabuleiro
             this.cor = _cor;
             this.tab = _tab;
             this.qtdMovimentos = 0;
+        }
+
+        public void incrementarQteMovimentos()
+        {
+          qtdMovimentos++;
         }
     }
 }
