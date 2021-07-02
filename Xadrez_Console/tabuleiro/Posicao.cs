@@ -16,6 +16,13 @@ namespace tabuleiro
         }
 
         //Métodos:
+        public void definirValores(int linha, int coluna)
+        {
+          this.coluna = coluna;
+          this.linha = linha;
+        }
+
+
         public override string ToString()
         {
             // Quando objeto da classe é criado e jogado para o output é tratado da forma abaixo:
